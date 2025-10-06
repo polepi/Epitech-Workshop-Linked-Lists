@@ -33,11 +33,21 @@ train_t *get_node(train_t *head, int to_find) {
     // TODO: Implement this function.
 }
 
+train_t *add_node_end(train_t *head) {
+    // TODO: Implement
+}
+
+void free_list(train_t *head) {
+    // TODO: Implement
+}
+
 int main() {
     struct train_l *head = NULL;
 
     for(int i = 0; i < 10; i++) {
         train_t *new_node = add_node_end(head);
+        if (head == NULL)
+            head = new_node;
         new_node->data = i * 2;
     }
 

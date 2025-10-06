@@ -35,12 +35,12 @@ train_t *add_node_first(train_t *head) {
 int main() {
     struct train_l *head = NULL;
 
-    train_t *new_node = add_node_first(head);
-    new_node->data = 123;
+    head = add_node_first(head);
+    head->data = 123;
 
-    new_node = add_node_first(head);
-    new_node->data = 456;
-
-    printf("First Item = %d\n", head->data);        // Should print "456"
-    printf("Second Item = %d\n", head->data);       // Should print "123"
+    head = add_node_first(head);
+    head->data = 456;
+    
+    printf("First Item = %d\n", head->data);                // Should print "456"
+    printf("Second Item = %d\n", head->next->data);         // Should print "123"
 }

@@ -29,18 +29,24 @@ Return:
 */
 
 void free_list(train_t *head) {
-    // TODO: Implement this function.
+    // TODO: Implement
+}
+
+train_t *add_node_end(train_t *head) {
+    // TODO: Implement
 }
 
 int main() {
-    struct train_l *head = NULL;
+    train_t *head = NULL;
 
     for(int i = 0; i < 10; i++) {
         train_t *new_node = add_node_end(head);
-        new_node->data = i;
+        if (head == NULL)
+            head = new_node;
+        new_node->data = i + 1;
     }
 
-    printf("First Item = %d\n", head->data);            // Should print "1"
+    printf("First Item = %d\n", head->data); // Should print "1"
 
     free_list(head);
     return 0;

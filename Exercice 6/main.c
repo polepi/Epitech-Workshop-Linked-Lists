@@ -37,12 +37,26 @@ int delete_node(train_t *head, int position) {
     // TODO: Implement this function.
 }
 
+train_t *add_node_end(train_t *head) {
+    // TODO: Implement
+}
+
+void free_list(train_t *head) {
+    // TODO: Implement
+}
+
+void print_list(train_t *head) {
+    // TODO: Implement this function.
+}
+
 int main() {
     struct train_l *head = NULL;
 
     for(int i = 0; i < 10; i++) {
         train_t *new_node = add_node_end(head);
-        new_node->data = i * 2;
+        if (head == NULL)
+            head = new_node;
+        new_node->data = i;
     }
 
     int postion_to_remove = 4;

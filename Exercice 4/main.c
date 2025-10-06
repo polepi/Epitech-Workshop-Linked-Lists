@@ -35,12 +35,22 @@ void print_list(train_t *head) {
     // TODO: Implement this function.
 }
 
+train_t *add_node_end(train_t *head) {
+    // TODO: Implement
+}
+
+void free_list(train_t *head) {
+    // TODO: Implement
+}
+
 int main() {
     struct train_l *head = NULL;
 
     for(int i = 0; i < 10; i++) {
         train_t *new_node = add_node_end(head);
-        new_node->data = i;
+        if (head == NULL)
+            head = new_node;
+        new_node->data = i + 1;
     }
 
     print_list(head);

@@ -30,17 +30,17 @@ Return:
 */
 
 train_t *add_node_end(train_t *head) {
-    // TODO: Implement this function.
+    // TODO: Implement
 }
 
 int main() {
     struct train_l *head = NULL;
 
-    train_t *new_node = add_node_end(head);
-    new_node->data = 123;
+    head = add_node_end(head);
+    head->data = 123;
 
-    new_node = add_node_end(head);
-    new_node->data = 456;
+    head = add_node_end(head);
+    head->data = 456;
 
     printf("First Item = %d\n", head->data);            // Should print "123"
     printf("Second Item = %d\n", head->next->data);     // Should print "456"
